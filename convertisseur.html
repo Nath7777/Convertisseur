@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convertisseur de fichiers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Convertisseur de fichiers</h1>
+    <p class="sub">Images, PDF, Word, vidéo, audio — tout se passe dans ton navigateur, rien n'est envoyé sur un serveur.</p>
+
+    <div id="drop">
+      <b>Glisse tes fichiers n'importe où sur la page</b> ou clique ici pour les choisir<br>
+      <span class="meta">JPG · PNG · WEBP · BMP · GIF · PDF · DOCX · XLSX · CSV · JSON · TXT · HTML · MP4 · WEBM · MP3 · WAV…</span>
+    </div>
+    <input id="file" type="file" multiple hidden>
+
+    <div id="list"></div>
+    <div id="actions">
+      <button class="primary" id="all">Tout convertir</button>
+      <button id="clear">Vider la liste</button>
+    </div>
+    <footer>Vidéo/audio : conversion en temps réel (la durée du fichier). Word : .docx uniquement. PDF scannés : utilise « docx (pages en images) ». Astuce : tu peux aussi coller une image avec Ctrl+V !</footer>
+  </main>
+
+  <!-- Bibliothèques externes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
